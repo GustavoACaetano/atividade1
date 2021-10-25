@@ -4,6 +4,9 @@ const lista = document.querySelector('ol');
 
 nomesComidas.forEach(nomesComida => {
     comidas.push(nomesComida.textContent)
+    const abc = document.createElement('a')
+    abc.setAttribute('name', 'retornar')
+    nomesComida.append(abc)
 });
 
 comidas.forEach(comida => {
@@ -12,10 +15,8 @@ comidas.forEach(comida => {
     lista.append(linha);
 });
 
-const retornarDiv = document.getElementsByName("retornar")
+const retornarName = document.getElementsByName("retornar")
 
-retornarDiv.forEach(cansei => {
-    abc = document.createElement('a')
-    abc.innerHTML = '<a href=#lista>Retornar</a>'
-    cansei.append(abc)
+retornarName.forEach(cansei => {
+    cansei.innerHTML = '<a href=#lista>Retornar</a>'
 })
